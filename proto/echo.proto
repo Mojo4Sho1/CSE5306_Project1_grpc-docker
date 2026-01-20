@@ -1,0 +1,17 @@
+syntax = "proto3"; // Clean + supported by both Python and Go
+
+package echo;
+
+service EchoService {
+  rpc Echo(EchoRequest) returns (EchoReply);
+}
+
+message EchoRequest {
+  string message = 1;
+}
+
+message EchoReply {
+  string original = 1;
+  string echoed = 2;
+  int32 length = 3;
+}
