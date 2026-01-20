@@ -1,6 +1,7 @@
 syntax = "proto3"; // Clean + supported by both Python and Go
 
 package echo;
+option go_package = "github.com/Mojo4Sho1/CSE5306_Project1_grpc-docker/go/pb;pb";  // Added option for go
 
 service EchoService {
   rpc Echo(EchoRequest) returns (EchoReply);
